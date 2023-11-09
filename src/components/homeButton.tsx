@@ -3,9 +3,13 @@
 import Button from "./button";
 
 export default function HomeButton() {
+  function onClickHandle() {
+    window.scrollTo({ left: 0, top: 0, behavior: "smooth" });
+  }
+
   return (
     <>
-      <Button title="Voltar pro começo" onClick={() => alert("voltar")}>
+      <Button title="Voltar pro começo" onClick={onClickHandle}>
         <svg
           viewBox="0 0 1024 1024"
           fill="currentColor"

@@ -6,7 +6,12 @@
     "start": "next start"
   },
   "dependencies": {
+    "@google-cloud/local-auth": "^3.0.0",
     "@googleapis/docs": "^3.0.0",
+    "@types/gapi": "^0.0.47",
+    "axios": "^1.6.0",
+    "gapi": "^0.0.3",
+    "googleapis": "^128.0.0",
     "next": "latest",
     "react": "18.2.0",
     "react-dom": "18.2.0",

@@ -3,24 +3,18 @@
 import Button from "./button";
 
 export default function PrintButton() {
-  const printIframe = () => {
-    var id = "proposal";
-    var iframe = window.frames
-      ? window.frames[id]
-      : document.getElementById(id);
+  function onClickHandle() {
+    const iframe: any = window.frames
+      ? window.frames[0]
+      : document.getElementsByTagName("iframe");
 
-    var newWin = window.open(iframe.src);
-    newWin?.print();
-    // iframe = iframe.contentWindow || iframe;
-
-    // print();
-
-    return false;
-  };
+    iframe.focus();
+    iframe.print();
+  }
 
   return (
     <>
-      <Button title="Imprimir proposta" onClick={printIframe}>
+      <Button title="Imprimir proposta" onClick={onClickHandle}>
         <svg
           fill="currentColor"
           viewBox="0 0 16 16"

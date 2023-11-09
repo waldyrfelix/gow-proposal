@@ -3,11 +3,14 @@
 import Button from "./button";
 
 export default function DownloadButton() {
+  function onClickHandle() {
+    const { pathname } = window.location;
+    const url = pathname.replaceAll("proposta", "api/pdf");
+    window.location.href = url;
+  }
+
   return (
-    <Button
-      title="Baixar proposta"
-      onClick={() => document.getElementById("proposal")}
-    >
+    <Button title="Baixar proposta" onClick={onClickHandle}>
       <svg
         fill="none"
         stroke="currentColor"
